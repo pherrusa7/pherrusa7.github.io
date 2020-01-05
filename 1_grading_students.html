@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Rating Students in Batches</title>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155134324-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-155134324-1');
+    </script>
+
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rating Students in Batches">
+    <meta name="author" content="Pedro Herruzo">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-9.css">
+
+
+
+
+</head> 
+
+<body>
+    
+    <header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html">Pedro Herruzo</a></h1>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+				    <a href="about.html">
+                        <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.png" alt="image" >        
+                    </a>			
+					
+					<div class="bio mb-3">Machine Learning Consultant & Data Scientist at <a href="https://www.seat.es/">SEAT,S.A.</a>, Industrial PhD Student in AI & Smart Mobility at the <a href="https://www.dama.upc.edu/es/el-equipo-1">Polytechnic University of Catalonia</a>.<br></div><!--//bio-->
+
+					<u >
+			            <i >
+			            	<a href="https://www.seat.es/">
+			            		<img src="my_web/images/cv/SEAT_Logo_from_2017.png" alt="SEAT" width="51px">
+			            	</a>
+			            </i>
+
+			            <i >
+			            	<a href="https://www.dama.upc.edu/es/el-equipo-1">
+			            		<img src="my_web/images/cv/upc_n.png" alt="UPC" width="51px">
+			            	</a>
+			            </i>
+			        </u><!--// uni and company-->
+
+					<ul class="social-list list-inline py-3 mx-auto">
+			            <li class="list-inline-item"><a href="https://twitter.com/HerruzoPedro"><i class="fab fa-twitter fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://www.linkedin.com/in/pherrusa7/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://github.com/pherrusa7"><i class="fab fa-github-alt fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://scholar.google.com/citations?user=uvXH2PYAAAAJ&hl=en"><i class="fab fa-google fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://www.quora.com/profile/Pedro-Herruzo"><i class="fab fa-quora fa-fw"></i></a></li>
+			            <li class="list-inline-item">
+			            	<a href="https://dblp.uni-trier.de/pers/hd/h/Herruzo:Pedro">
+			            		<i class="fas fa-graduation-cap"></i>
+			            	</a>
+			            </li>
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+				<ul class="navbar-nav flex-column text-left">
+					<li class="nav-item active">
+					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="about.html">
+					    	<i class="fas fa-user fa-fw mr-2"></i>About Me
+					    </a>
+					</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="my_web/Pedro_Herruzo_CV.pdf">
+                            <i class="fas fa-file fa-fw mr-2"></i>My CV
+                        </a>
+                    </li>
+				</ul><!--//navigation bar-->
+				
+				<div >
+                    <br>
+                    <ul class="navbar-nav flex-column text-left">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="mailto:pherruzo@ac.upc.edu">
+                                <i class="fas fa-paper-plane fa-fw"></i> pherruzo@ac.upc.edu
+                            </a>
+                        </li>
+                    </ul><!--//navigation bar-->
+                    <!--<br> <i class="fas fa-paper-plane fa-fw"></i> pedro.herruzo@seat.es-->
+                </div><!--//emails-->
+			</div>
+		</nav>
+    </header>
+
+    
+    <div class="main-wrapper">
+	    	    
+	    <article class="about-section py-5">
+		    <div class="container">
+
+		    	<h2 class="title mb-3">Rating Students in Batches</h2>
+			    <p> In this post, I explain a method to grade a large number of students including comment sections per exercise I found efficient. </p>
+
+                <p> Let us suppose that the practice handed by the students has 3 exercises, and you, as a teacher, want to rate each of them and add comments in each so the student can get feedback instead of only the mark. </p> <br>
+
+		    	<section id="What do you need?">
+		    		<h2 class="title mb-3">What do you need?</h2>
+		    		<div class="wrapper">
+                        <ol class="text-left">
+                            <li>A comments template:</li>
+                                <div style="border:3px; border-style:solid; border-color:#000000; padding: 1em;">
+  
+                                  <b>COMMENTS PRACTISE 1: DD/MM/YYYY</b><br><br>
+                                  
+                                  <b>General Comments: </b>
+                                  <ul style="list-style-type:none;">
+                                    <li>a. You do not specify who is your partner</li>
+                                    <li>b. Format file .zip is wrong: Create a unique .zip with all 3 exercises in different files, with their consecutive number.</li>
+                                    <li>c. Good code readability, keep doing like this!</li>
+                                  </ul>  <br>
+
+
+                                  <b>Exercice 1: </b>
+                                  <ul style="list-style-type:none;">
+                                    <li>a. Singular/plural cases are not considered</li>
+                                    <li>b. The program should only finish if the user enters a negative number</li>
+                                  </ul> <br>
+
+                                  <b>Exercice 2: </b>
+                                  <ul style="list-style-type:none;">
+                                    <li>a. At the end of the loop, you do not distinguish if the user has terminated with success or if she just exhausted her maximum number of attempts</li> <br>
+
+                                    <li>Observation 1 (z1). Checking if the given money is an integer could be done easier using try/except</li>
+                                  </ul> <br>
+
+                                  <b>Exercice 3: </b>
+                                  <ul style="list-style-type:none;">
+                                    <li>a. You should count the number of characters by yourself, not using len()</li> 
+                                    <li>b. Counters should be initialized inside of the loop</li><br>
+                                    <li>z1. Remember that 'for' should be used if you know the length of the sequence, use 'while' if you do not know it</li>
+                                  </ul> 
+                                </div> <br>
+                            <li>Your grading file:</li>
+                                <div style="border:3px; border-style:solid; border-color:#000000; padding: 1em;" class="table-wrapper">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:15%;font-weight: bold;">
+                                                    Student ID
+                                                </td>
+                                                <td style="font-weight: bold;">
+                                                    Exercice 1
+                                                </td>
+
+                                                <td style="font-weight: bold;">
+                                                    Exercice 2
+                                                </td>
+
+                                                <td style="font-weight: bold;">
+                                                    Exercice 3
+                                                </td>
+                                                <td style="font-weight: bold;">
+                                                    Comments
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td >
+                                                    46476312J
+                                                </td>
+                                                <td >
+                                                    4
+                                                </td>
+
+                                                <td >
+                                                   7.5
+                                                </td>
+
+                                                <td >
+                                                    9
+                                                </td>
+                                                <td >
+                                                    Gab, 1ab, 2a, 3az1
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td >
+                                                    34478313L
+                                                </td>
+                                                <td >
+                                                    10
+                                                </td>
+
+                                                <td >
+                                                   10
+                                                </td>
+
+                                                <td >
+                                                    5
+                                                </td>
+                                                <td >
+                                                    Gc, 2z1, 3b
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </ol>
+					</div>
+		    	</section> <br>
+
+                <section id="How do you fill it?">
+                    <h2 class="title mb-3">How do you fill it?</h2>
+                    <div class="wrapper">
+                        Simply, start with the "Comments template" empty, start grading student by student filling the template, given the mark to the student, and attaching the corresponding comments per exercise in the "grading file". This way your "Comments template" will grow and you will end up only referencing the already written comments in the grading file, saving a lot of time for you.
+                    </div>
+                </section> <br>
+
+                <section id="Benefits">
+                    <h2 class="title mb-3">Benefits</h2>
+                    <div class="wrapper">
+                        <ul>
+                            <li>Save your time without writing duplicate comments</li>
+                            <li>Give students transparency in your corrections: All of them can read all errors/suggestions</li>
+                            <li>Use it next year to inform your students about common mistakes/suggestion</li>
+                            <li>Use it next year to save you time again</li>
+                            <li>Use it to objectively report the grades</li>
+                        </ul>
+                    </div>
+                </section> <br>
+
+                <section id="Share">
+                    <h2 class="title mb-3">Share</h2>
+                    <div class="wrapper">
+                        If you consider the content of this post interesting, please, consider sharing it using Twitter, so we can chat about it! Thanks for your time :)
+
+                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Hi! Check out this post about a method to grade a large number of students saving time and being transparent with the students" data-url="https://pherrusa7.github.io/1_grading_students.html" data-via="HerruzoPedro" data-hashtags="RatingStudentsinBatches" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        
+                    </div>
+                </section>
+
+                <!--//<div style="border:3px; border-style:solid; border-color:#000000; padding: 1em;">
+  
+                                  <b>COMMENTS PRACTISE 1: DD/MM/YYYY</b><br><br>
+                                  
+                                  <b>General Comments: </b>
+                                  <ul style="list-style-type:none;">
+                                    <li>a. </li>
+                                    <li>b. </li>
+                                    <li>c. </li>
+                                  </ul> 
+
+
+                                  <b>Exercice 1: </b>
+                                  <ul style="list-style-type:none;">
+                                    <li>a. </li>
+                                    <li>b. </li>
+                                  </ul> 
+
+                                  <b>Exercice 2: </b>
+                                  <ul style="list-style-type:none;">
+                                    <li>a. </li> 
+                                  </ul> 
+
+                                  <b>Exercice 3: </b>
+                                  <ul style="list-style-type:none;">
+                                    <li>a. </li> 
+                                    <li>b. </li>
+                                    <li>z1. </li>
+                                  </ul> 
+                                </div> 
+                -->
+
+                <nav class="blog-nav nav nav-justified my-5">
+                  <a class="nav-link-prev nav-item nav-link rounded-left" href="index.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+                  <a class="nav-link-next nav-item nav-link rounded" href="about.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+                </nav>
+
+		    </div>
+	    </article><!--//about-section-->
+	    
+
+	    
+	    <footer class="footer text-center py-2 theme-bg-dark">
+		   
+	        <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+		   
+	    </footer>
+    
+    </div><!--//main-wrapper-->
+    
+
+
+    
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script> 
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    
+    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+    <!-- <script src="assets/js/demo/style-switcher.js"></script>   -->           
+    
+
+</body>
+</html> 
+
