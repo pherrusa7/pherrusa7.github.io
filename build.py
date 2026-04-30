@@ -2,6 +2,7 @@
 from pathlib import Path
 import os
 import html
+import hashlib
 import re
 import shutil
 
@@ -56,6 +57,12 @@ def browser_path(current_html: Path, target: Path) -> str:
     # Use relative paths so double-clicking index.html works locally.
     rel = os.path.relpath(target, current_html.parent)
     return Path(rel).as_posix()
+
+
+def asset_path(current_html: Path, target: Path) -> str:
+    # GitHub Pages caches assets. Version them so CSS/JS updates arrive together.
+    digest = hashlib.sha1(target.read_bytes()).hexdigest()[:10]
+    return f"{browser_path(current_html, target)}?v={digest}"
 
 
 def output_for_source(source: Path) -> Path | None:
@@ -251,8 +258,8 @@ def page_title(markdown: str) -> str:
 
 
 def wrap(title: str, body: str, out_path: Path) -> str:
-    css = browser_path(out_path, STYLE)
-    fun_js = browser_path(out_path, FUN_SCRIPT)
+    css = asset_path(out_path, STYLE)
+    fun_js = asset_path(out_path, FUN_SCRIPT)
     home = browser_path(out_path, ROOT / "index.html")
     return f"""<!doctype html>
 <html lang="en">
