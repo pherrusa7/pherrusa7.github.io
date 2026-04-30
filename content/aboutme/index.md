@@ -15,6 +15,7 @@ I build real-time AI systems for the physical world: currently generative models
 - [Talks](talks.md)
 - [Awards](awards.md)
 - [Education](education.md)
+- [Resume](https://drive.google.com/file/d/1FLn1ztJaG2tDWPmniKXVzdCmMzSg0Jl9/view?usp=sharing)
 
 ## Links
 
@@ -24,7 +25,6 @@ I build real-time AI systems for the physical world: currently generative models
 [Google Scholar](https://scholar.google.com/citations?user=uvXH2PYAAAAJ&hl=en)&nbsp;&nbsp;&nbsp;
 [Quora](https://www.quora.com/profile/Pedro-Herruzo)&nbsp;&nbsp;&nbsp;
 [DBLP](https://dblp.uni-trier.de/pers/hd/h/Herruzo:Pedro)&nbsp;&nbsp;&nbsp;
-[CV](https://drive.google.com/file/d/1FLn1ztJaG2tDWPmniKXVzdCmMzSg0Jl9/view?usp=sharing)&nbsp;&nbsp;&nbsp;
 
 For conventional communication, send me an [email](mailto:pedro.herruzo@iarai.ac.at).
 

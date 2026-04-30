@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parent
 CONTENT = ROOT / "content"
 WEB = ROOT / "web"
 STYLE = ROOT / "assets" / "css" / "style.css"
+FUN_SCRIPT = ROOT / "assets" / "js" / "fun.js"
 
 PAGES = {
     CONTENT / "index.md": ROOT / "index.html",
@@ -251,9 +252,8 @@ def page_title(markdown: str) -> str:
 
 def wrap(title: str, body: str, out_path: Path) -> str:
     css = browser_path(out_path, STYLE)
+    fun_js = browser_path(out_path, FUN_SCRIPT)
     home = browser_path(out_path, ROOT / "index.html")
-    about = browser_path(out_path, WEB / "aboutme" / "index.html")
-    post = browser_path(out_path, WEB / "posts" / "rating-students-in-batches.html")
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -264,15 +264,17 @@ def wrap(title: str, body: str, out_path: Path) -> str:
 </head>
 <body>
   <header class="site-header">
-    <a href="{home}">Pedro Herruzo</a>
-    <nav aria-label="Main navigation">
-      <a href="{about}">About me</a>
-      <a href="{post}">Posts</a>
-    </nav>
+    <a class="home-mark" href="{home}" aria-label="Home" title="Home">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="2.7" />
+        <ellipse cx="16" cy="16" rx="11" ry="4.4" transform="rotate(45 16 16)" />
+      </svg>
+    </a>
   </header>
   <main>
 {body}
   </main>
+  <script src="{fun_js}" defer></script>
 </body>
 </html>
 """

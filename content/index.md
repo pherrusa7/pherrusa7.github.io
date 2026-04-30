@@ -5,10 +5,5 @@ Welcome to my blog. Here I share thoughts and contents I believe can be useful t
 ## Content Index
 
 - [About me](aboutme/index.md)
-  - [Experience](aboutme/experience.md)
-  - [Publications](aboutme/publications.md)
-  - [Talks](aboutme/talks.md)
-  - [Awards](aboutme/awards.md)
-  - [Education](aboutme/education.md)
 - Posts
   -  05 Jan, 2020 · Teaching · [Rating Students in Batches](posts/rating-students-in-batches.md)
